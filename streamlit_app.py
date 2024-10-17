@@ -10,7 +10,6 @@ st.text(fruityvice_response)
 cnx = st.connection("snowflake")
 session = cnx.session()
 
-
 # Write directly to the app
 st.title(":cup_with_straw: Customize Your Smoothie :cup_with_straw:")
 st.write(
@@ -34,7 +33,7 @@ ingredients_list = st.multiselect(
 )
 st.write(name_on_order, ingredients_list)
 
-if len(ingredients_list)>0:
+if ingredients_list:
 
     ingredients_string = ''
 
